@@ -10,7 +10,7 @@ How to wire up a Flourish visual with an external page using [Flourish's URL sta
 
 ## HTML
 
-4. Embed visual (with the embed code if you wanted)
+4. Embed visual (with the embed code for example)
 
 ## JS
 
