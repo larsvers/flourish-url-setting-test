@@ -1,5 +1,5 @@
 function ready() {
-  // Updateing the line chart.
+  // Updating the line chart.
   // ------------------------
 
   // These are the settings we want to change.
@@ -20,7 +20,7 @@ function ready() {
     iFrameLine.src = iFrameLineURL.href;
   }, 2000);
 
-  // Updateing the bar chart.
+  // Updating the bar chart.
   // -----------------------
 
   const barSettings = {
