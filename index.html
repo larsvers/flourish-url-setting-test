@@ -3,19 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <title>Flourish URL state test</title>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <style type="text/css"></style>
+    <style type="text/css">
+      .chart {
+        margin: 3rem 0;
+      }
+
+      .data-note {
+        text-align: center;
+        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <div id="my-line-chart">
+    <div id="my-line-chart" class="chart">
       <div
-        class="flourish-embed flourish-chart"
-        data-src="visualisation/5499521?356488"
+      class="flourish-embed flourish-chart"
+      data-src="visualisation/5499521?356488"
       ></div>
+      <div class="data-note"></div>
     </div>
 
-    <div id="my-bar-chart">
+    <div id="my-bar-chart" class="chart">
       <div
         class="flourish-embed flourish-chart"
         data-src="visualisation/5579583?356488"

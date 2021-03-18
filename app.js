@@ -1,11 +1,22 @@
-function ready() {
+/* eslint-disable no-undef */
+function ready(data) {
   // Updating the line chart.
   // ------------------------
 
+  // Check if country data exists.
+  const hasData1 = data.filter(d => d.iso_code === 'BEN')[0].data1;
+
   // These are the settings we want to change.
-  const lineSettings = {
-    series_filter: ['BEN'],
-  };
+  let lineSettings = {};
+  if (hasData1) {
+    lineSettings = {
+      series_filter: ['BEN'],
+    };
+  } else {
+    const note = document.querySelector('#my-line-chart .data-note');
+    note.innerHTML =
+      "Sorry - there's no data for Benin. But have a look at these ↑ other countries...";
+  }
 
   // Encode the settings
   const encodedLineSettings = encodeURIComponent(JSON.stringify(lineSettings));
@@ -43,4 +54,8 @@ function ready() {
   }, 2000);
 }
 
-document.body.onload = ready;
+function load() {
+  d3.csv('data/data_availability.csv', d3.autoType).then(ready);
+}
+
+document.body.onload = load;
